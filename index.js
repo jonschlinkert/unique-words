@@ -9,9 +9,7 @@
 
 var unique = require('array-unique');
 
-module.exports = function(arr) {
-  arr = !Array.isArray(arr) ? [arr] : arr;
-  arr = arr.join(' ').split(' ');
-
-  return unique(arr);
+module.exports = function() {
+  var words = [].concat.apply([], arguments);
+  return unique(words.join(' ').split(' '));
 };

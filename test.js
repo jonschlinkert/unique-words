@@ -7,29 +7,28 @@
 
 'use strict';
 
-var uniqueWords = require('./');
 var should = require('should');
+var uniqueWords = require('./');
 
-describe('unique-words', function () {
-  describe('when a string is passed:', function () {
-    it('should return an array of unique words.', function () {
-      var actual = uniqueWords('one two one two three two two one');
-      var expected = ['one', 'two', 'three'];
-      actual.should.eql(expected);
+describe('unique-words', function() {
+  describe('when a string is passed:', function() {
+    it('should return an array of unique words.', function() {
+      var actual = uniqueWords('a b a b c b b a');
+      actual.should.eql(['a', 'b', 'c']);
     });
   });
 
-  describe('when an array is passed:', function () {
-    it('should return an array of unique words.', function () {
-      var actual = uniqueWords([
-        'foo',
-        'foo',
-        'foo bar',
-        'bar',
-        'bar baz foo'
-      ]);
-      var expected = ['foo', 'bar', 'baz'];
-      actual.should.eql(expected);
+  describe('when a list of arguments is passed:', function() {
+    it('should return an array of unique words.', function() {
+      uniqueWords('a', 'b', 'a', 'b c b a').should.eql(['a', 'b', 'c']);
+      uniqueWords(['a', 'b'], ['a'], 'b c b a').should.eql(['a', 'b', 'c']);
+    });
+  });
+
+  describe('when an array is passed:', function() {
+    it('should return an array of unique words.', function() {
+      var actual = uniqueWords(['foo', 'foo', 'foo bar', 'bar', 'bar baz foo']);
+      actual.should.eql(['foo', 'bar', 'baz']);
     });
   });
 });

@@ -1,7 +1,7 @@
 {
   "name": "unique-words",
   "description": "Return the unique words in a string or array.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/unique-words",
   "author": {
     "name": "Jon Schlinkert",
@@ -18,26 +18,25 @@
     "type": "MIT",
     "url": "https://github.com/jonschlinkert/unique-words/blob/master/LICENSE-MIT"
   },
-  "keywords": [
-    "docs",
-    "documentation",
-    "generate",
-    "generator",
-    "markdown",
-    "templates",
-    "verb"
-  ],
   "engines": {
     "node": ">=0.8"
   },
   "scripts": {
     "test": "mocha --require should"
   },
+  "dependencies": {
+    "array-unique": "^0.1.1"
+  },
   "devDependencies": {
     "mocha": "^2.0.1",
     "should": "^4.4.1"
   },
-  "dependencies": {
-    "array-unique": "^0.1.1"
-  }
+  "keywords": [
+    "keyword",
+    "uniq",
+    "unique",
+    "util",
+    "utility",
+    "word"
+  ]
 }
