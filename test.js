@@ -7,7 +7,8 @@
 
 'use strict';
 
-var uniqueWords = require('./index');
+var uniqueWords = require('./');
+var should = require('should');
 
 describe('unique-words', function () {
   describe('when a string is passed:', function () {
@@ -32,4 +33,3 @@ describe('unique-words', function () {
     });
   });
 });
-
