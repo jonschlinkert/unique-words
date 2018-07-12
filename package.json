@@ -1,35 +1,26 @@
 {
   "name": "unique-words",
-  "description": "Return the unique words in a string or array.",
+  "description": "Returns an array of unique words, or the number of occurrences of each word in a string or list.",
   "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/unique-words",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "http://github.com/jonschlinkert/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/unique-words.git"
-  },
+  "author": "Jon Schlinkert (http://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/unique-words",
   "bugs": {
     "url": "https://github.com/jonschlinkert/unique-words/issues"
   },
-  "licenses": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/unique-words/blob/master/LICENSE-MIT"
-  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
   "engines": {
     "node": ">=0.8"
   },
   "scripts": {
-    "test": "mocha --require should"
-  },
-  "dependencies": {
-    "array-unique": "^0.1.1"
+    "test": "mocha"
   },
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "should": "^4.4.1"
+    "mocha": "^5.2.0"
   },
   "keywords": [
     "keyword",
@@ -37,6 +28,7 @@
     "unique",
     "util",
     "utility",
-    "word"
+    "word",
+    "words"
   ]
 }

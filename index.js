@@ -1,15 +1,19 @@
 /**
  * unique-words <https://github.com/assemble/unique-words>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
+ * Copyright (c) 2014-present, Jon Schlinkert.
  * Licensed under the MIT license.
  */
 
 'use strict';
 
-var unique = require('array-unique');
+const split = (...args) => [].concat.apply([], args).join(' ').split(/\W+/);
 
-module.exports = function() {
-  var words = [].concat.apply([], arguments);
-  return unique(words.join(' ').split(' '));
+module.exports = (...args) => [...new Set(split(...args))];
+
+module.exports.counts = (...args) => {
+  return split(...args).reduce((acc, word) => {
+    if (word) acc[word] = (acc[word] || 0) + 1;
+    return acc;
+  }, {});
 };
