@@ -1,5 +1,5 @@
 /**
- * unique-words <https://github.com/assemble/unique-words>
+ * unique-words <https://github.com/jonschlinkert/unique-words>
  *
  * Copyright (c) 2014-present, Jon Schlinkert.
  * Licensed under the MIT license.
