@@ -14,12 +14,13 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=0.8"
+    "node": ">=8"
   },
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
+    "gulp-format-md": "^1.0.0",
     "mocha": "^5.2.0"
   },
   "keywords": [
@@ -30,5 +31,18 @@
     "utility",
     "word",
     "words"
-  ]
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
 }
